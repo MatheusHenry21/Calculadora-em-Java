@@ -2,7 +2,8 @@
 import java.util.Scanner;
 
 public class Main {
-    static void main(String[] args) {
+
+    public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
         System.out.println("\nBem-vindo a CALCULADORA\n");
@@ -17,5 +18,21 @@ public class Main {
             System.out.print("Digite o índice da opção que deseja utilizar: ");
             int opcao = sc.nextInt();
         }
+    }
+
+    public double somar(double a, double b){
+        return a + b;
+
+    }
+    public double subtrair(double a, double b){
+        return a - b;
+    }
+
+    public double multiplicar(double a, double b){
+        return a * b;
+    }
+
+    public double dividir(double a, double b){
+        return a / b;
     }
 }
