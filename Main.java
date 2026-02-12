@@ -23,24 +23,37 @@ public class Main {
                 break;
             }
 
-            double[] valores = Entrada.ler_numero();
-            Operacoes op = new Operacoes();
+            int[] opcoes = {1,2,3,4};
+            boolean opcaoValida = false;
 
-            switch (opcao){
-                case 1:
-                    System.out.println("\n" + valores[0] + " + " + valores[1] + " = " + op.somar(valores[0], valores[1]));
+            for (int op: opcoes){
+                if (op == opcao){
+                    opcaoValida = true;
                     break;
-                case 2:
-                    System.out.println("\n" + valores[0] + " - " + valores[1] + " = " + op.subtrair(valores[0], valores[1]));
-                    break;
-                case 3:
-                    System.out.println("\n" + valores[0] + " x " + valores[1] + " = " + op.multiplicar(valores[0], valores[1]));
-                    break;
-                case 4:
-                    System.out.println("\n" + valores[0] + " / " + valores[1] + " = " + op.dividir(valores[0], valores[1]));
-                    break;
-                default:
-                    System.out.println("Opção inexistente, tente novamente...");
+                }
+            }
+
+            if (!opcaoValida){
+                System.out.println("\nOpção inexistente, tente novamente...");
+            }
+            else {
+                double[] valores = Entrada.ler_numero();
+                Operacoes op = new Operacoes();
+
+                switch (opcao){
+                    case 1:
+                        System.out.println("\n" + valores[0] + " + " + valores[1] + " = " + op.somar(valores[0], valores[1]));
+                        break;
+                    case 2:
+                        System.out.println("\n" + valores[0] + " - " + valores[1] + " = " + op.subtrair(valores[0], valores[1]));
+                        break;
+                    case 3:
+                        System.out.println("\n" + valores[0] + " x " + valores[1] + " = " + op.multiplicar(valores[0], valores[1]));
+                        break;
+                    case 4:
+                        System.out.println("\n" + valores[0] + " / " + valores[1] + " = " + op.dividir(valores[0], valores[1]));
+                        break;
+            }
             }
         }
     }
